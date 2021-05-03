@@ -12,10 +12,10 @@ execute if entity @e[tag=JMP2] run scoreboard players operation output Registers
 #execute if entity @e[tag=JMP] as @e[tag=eip] run function asm:read_reg
 #execute if entity @e[tag=JMP] run scoreboard players operation output Registers += input Registers
 
-execute unless entity @s[tag=JMP2] run clone ~ ~ ~ ~ ~ ~ 0 28 -20
-execute unless entity @s[tag=JMP2] at @e[tag=top,limit=1] positioned ~2 ~ ~ run function asm:jmp_step
-execute unless entity @s[tag=JMP2] as @e[tag=top,limit=1] store result score output Registers run data get entity @s Pos[1]
-execute unless entity @s[tag=JMP2] store result score input Registers run data get entity @s Pos[1]
+execute unless entity @s[tag=JMP2] run clone ~ ~ ~ ~ ~ ~ 0 29 -20
+execute unless entity @s[tag=JMP2] at @e[tag=top,limit=1] positioned ~2 ~ ~ run function asm:inst/jmp_step
+execute unless entity @s[tag=JMP2] as @e[tag=top,limit=1] store result score input Registers run data get entity @s Pos[2]
+execute unless entity @s[tag=JMP2] store result score output Registers run data get entity @s Pos[2]
 execute unless entity @s[tag=JMP2] run scoreboard players operation output Registers -= input Registers
 
 execute as @e[tag=eip] run function asm:save_reg
