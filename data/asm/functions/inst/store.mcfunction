@@ -13,9 +13,10 @@ function asm:set_target
 execute as @e[tag=Target] run function asm:read_reg
 #scoreboard players add input Registers 4
 
-tp @e[tag=ram] 45 67 -20
+# ram tp
+tp @e[tag=ram] 65 4 0
 execute as @e[tag=ram] at @s run function asm:stack_reset_step
 
 scoreboard players set bits Registers 32
-execute as @e[tag=ram] at @s positioned ~8 ~-3 ~ run function asm:push_step
+execute as @e[tag=ram] at @s positioned ~8 ~ ~3 run function asm:inst/push_step
 scoreboard players reset bits Registers

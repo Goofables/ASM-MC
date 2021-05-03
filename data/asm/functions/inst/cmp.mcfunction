@@ -18,10 +18,10 @@ execute if block ~2 ~ ~ #asm:hex positioned ~2 ~ ~ run function asm:hex_in
 #execute if score input Registers < output Registers run scoreboard players set #G Registers 1
 #execute if score input Registers = output Registers run scoreboard players set #E Registers 1
 
-setblock 7 28 -20 black_concrete
-execute if score output Registers > input Registers run setblock 7 28 -20 white_concrete
-setblock 10 28 -20 black_concrete
-execute if score output Registers = input Registers run setblock 10 28 -20 white_concrete
+setblock 7 29 -20 black_concrete
+execute if score output Registers > input Registers run setblock 7 29 -20 white_concrete
+setblock 10 29 -20 black_concrete
+execute if score output Registers = input Registers run setblock 10 29 -20 white_concrete
 
 #scoreboard players operation output Registers -= input Registers
 

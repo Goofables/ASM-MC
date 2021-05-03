@@ -4,10 +4,11 @@ execute if block ~ ~ ~ #asm:reg run function asm:set_target
 execute if block ~ ~ ~ #asm:reg as @e[tag=Target] run function asm:read_reg
 
 execute if block ~ ~ ~ #asm:hex run function asm:hex_in
+
 scoreboard players operation output Registers = input Registers
 
 scoreboard players set bits Registers 32
-execute as @e[tag=esp2] at @s positioned ~8 ~1 ~ run function asm:push_step
+execute as @e[tag=esp2] at @s positioned ~8 ~ ~-1 run function asm:inst/push_step
 scoreboard players reset bits Registers
 
 
