@@ -5,7 +5,6 @@ function asm:set_target
 scoreboard players set bits Registers 32
 execute as @e[tag=esp2] at @s positioned ~1 ~ ~ run function asm:inst/pop_step
 scoreboard players reset bits Registers
-tellraw @a ["",{"score":{"name":"input","objective":"Registers"}}]
 
 scoreboard players operation output Registers = input Registers
 execute as @e[tag=Target] run function asm:save_reg

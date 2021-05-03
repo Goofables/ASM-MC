@@ -12,7 +12,7 @@ execute as @e[tag=eip] run function asm:save_reg
 
 
 # ram tp
-tp @e[tag=ram] 65 4 0
+tp @e[tag=ram] 65 4 0 -90 0
 
 
 # Ram
