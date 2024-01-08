@@ -32,11 +32,11 @@ There is a resource pack which retextures the blocks to show their instruction.
 | ret         |           | prismarine            | POP EIP                                                       |
 | store       | R1 R2/HEX | cobblestone           | Write value to R1 in ram                                      |
 | sub         | R1 R2/HEX | crimson_planks        | Subtract value to R1, save to R1                              |
-| syscall     |           | chain_command_block   |                                                               |
+| syscall     |           | chain_command_block   | Execute a [syscall](#syscalls)                                |
 
 ### Registers
 
-| Register | Block           |                     |
+| Register | Block           | Common uses         |
 |:---------|:----------------|---------------------|
 | EAX      | netherite       | Return value        |
 | EBX      | diamond_block   |                     |
